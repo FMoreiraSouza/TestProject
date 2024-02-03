@@ -1,0 +1,14 @@
+site:
+  title: "TestProject"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/dist/js/developmentExecutable/testproject.js"
+      api: "build/libs/testproject.jar"
+    prod:
+      script: "build/dist/js/productionExecutable/testproject.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
