@@ -67,8 +67,8 @@ fun LeftSide(
 ) {
     Row(
         modifier = Modifier
-            .backgroundColor(Colors.Yellow)
-            .fillMaxWidth(35.percent),
+            .backgroundColor(Colors.Yellow),
+//            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (breakpoint < Breakpoint.MD) {
@@ -84,9 +84,9 @@ fun LeftSide(
         }
         A(href = "/") {
             Image(
-                modifier = Modifier
+                modifier = Modifier,
 //                    .minHeight(5.vh)
-                    .fillMaxSize(),
+//                    .fillMaxSize(),
                 src = "ProfessionalLogo.png"
             )
         }
@@ -101,7 +101,7 @@ fun RightSide(
     Row(
         modifier = Modifier
             .backgroundColor(Colors.Green)
-            .fillMaxWidth(65.percent),
+            .fillMaxWidth(),
         horizontalArrangement = Arrangement.End,
     ) {
         Section.entries.forEach { section ->
