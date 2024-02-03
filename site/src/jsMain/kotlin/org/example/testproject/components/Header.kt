@@ -52,7 +52,7 @@ fun Header(onMenuClicked: () -> Unit) {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-//        LeftSide(breakpoint, onMenuClicked)
+        LeftSide(breakpoint, onMenuClicked)
         if (breakpoint >= Breakpoint.MD) {
             RightSide(breakpoint, colorMode)
         }
@@ -74,6 +74,7 @@ fun LeftSide(
             FaBars(
                 modifier = Modifier
                     .margin(right = 4.px, bottom = 8.px)
+                    .minHeight(900.px)
                     .cursor(Cursor.Pointer)
                     .onClick {
                         onMenuClicked()
