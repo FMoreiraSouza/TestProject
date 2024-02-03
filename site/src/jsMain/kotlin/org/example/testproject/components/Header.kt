@@ -74,7 +74,6 @@ fun LeftSide(
             FaBars(
                 modifier = Modifier
                     .margin(right = 4.px, bottom = 8.px)
-                    .minHeight(900.px)
                     .cursor(Cursor.Pointer)
                     .onClick {
                         onMenuClicked()
@@ -84,7 +83,9 @@ fun LeftSide(
         }
         A(href = "/") {
             Image(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .minHeight(900.px),
+//                    .fillMaxSize(),
                 src = "ProfessionalLogo.png"
             )
         }
