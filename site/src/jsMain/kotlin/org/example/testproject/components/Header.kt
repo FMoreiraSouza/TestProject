@@ -66,8 +66,8 @@ fun LeftSide(
 ) {
     Row(
         modifier = Modifier
-            .backgroundColor(Colors.Yellow)
-            .fillMaxWidth(80.percent),
+            .backgroundColor(Colors.Yellow),
+//            .fillMaxWidth(80.percent),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (breakpoint < Breakpoint.MD) {
