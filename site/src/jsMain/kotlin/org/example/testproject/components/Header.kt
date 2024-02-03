@@ -84,8 +84,8 @@ fun LeftSide(
         }
         A(href = "/") {
             Image(
-                modifier = Modifier,
-//                    .minHeight(5.vh)
+                modifier = Modifier
+                    .minHeight(5.vh),
 //                    .fillMaxSize(),
                 src = "ProfessionalLogo.png"
             )
