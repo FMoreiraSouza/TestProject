@@ -9,6 +9,6 @@ server:
       api: "build/libs/testproject.jar"
     prod:
       script: "build/dist/js/productionExecutable/testproject.js"
-      siteRoot: ".kobweb/site"
+      siteRoot: "kobweb/site"
 
   port: 8080
