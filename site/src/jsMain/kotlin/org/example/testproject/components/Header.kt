@@ -37,31 +37,24 @@ fun Header(onMenuClicked: () -> Unit) {
     val breakpoint = rememberBreakpoint()
     val colorMode by ColorMode.currentState
     Row(
-        modifier = Modifier.zIndex(2)
-            .position(Position.Fixed).fillMaxWidth().padding(1.cssRem).margin(top = 20.px),
-        horizontalArrangement = Arrangement.Center,
+        modifier = Modifier
+            .padding(1.cssRem)
+            .position(Position.Fixed)
+            .zIndex(2)
+            .fillMaxWidth()
+            .backgroundColor(
+                if (colorMode.isLight) Color.Companion.rgb(255, 255, 255) else Color.Companion.rgb(
+                    35,
+                    35,
+                    35
+                )
+            ),
+        horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Row(
-            modifier = Modifier
-                .padding(1.cssRem)
-                .position(Position.Fixed)
-                .zIndex(2)
-                .fillMaxWidth()
-                .backgroundColor(
-                    if (colorMode.isLight) Color.Companion.rgb(255, 255, 255) else Color.Companion.rgb(
-                        35,
-                        35,
-                        35
-                    )
-                ),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            LeftSide(breakpoint, onMenuClicked)
-            if (breakpoint >= Breakpoint.MD) {
-                RightSide(breakpoint, colorMode)
-            }
+        LeftSide(breakpoint, onMenuClicked)
+        if (breakpoint >= Breakpoint.MD) {
+            RightSide(breakpoint, colorMode)
         }
     }
 }
@@ -71,7 +64,12 @@ fun LeftSide(
     breakpoint: Breakpoint,
     onMenuClicked: () -> Unit
 ) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier = Modifier
+            .backgroundColor(Colors.Yellow)
+            .fillMaxWidth(80.percent),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         if (breakpoint < Breakpoint.MD) {
             FaBars(
                 modifier = Modifier
@@ -85,7 +83,7 @@ fun LeftSide(
         }
         A(href = "/") {
             Image(
-                modifier = Modifier.fillMaxSize(if (breakpoint >= Breakpoint.SM && breakpoint < Breakpoint.MD) 80.percent else 100.percent),
+                modifier = Modifier.fillMaxSize(),
                 src = "ProfessionalLogo.png"
             )
         }
@@ -98,14 +96,16 @@ fun RightSide(
     colorMode: ColorMode
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .backgroundColor(Colors.Green)
+            .fillMaxWidth(),
         horizontalArrangement = Arrangement.End,
     ) {
         Section.entries.forEach { section ->
             Link(
                 modifier = NavigationHeaderStyle.toModifier()
-//                    .padding(leftRight = 5.px, topBottom = 10.px)
-//                    .margin(bottom = 4.px)
+                    .padding(leftRight = 5.px, topBottom = 10.px)
+                    .margin(bottom = 4.px)
                     .fontFamily("Sans-Serif")
                     .textAlign(TextAlign.Center)
                     .fontSize(if (breakpoint > Breakpoint.MD) 18.px else 14.px)
@@ -126,11 +126,11 @@ fun ToogleColorThemeButton(breakpoint: Breakpoint) {
     Button(
         onClick = { colorMode = colorMode.opposite },
         modifier = Modifier
-            .setVariable(ButtonVars.FontSize, 1.em),
-//            .margin(
-//                top = if (breakpoint < Breakpoint.MD) 10.px else 1.px,
-//                left = if (breakpoint < Breakpoint.SM) 8.px else if (breakpoint < Breakpoint.MD) 10.px else 5.px
-//            ),
+            .setVariable(ButtonVars.FontSize, 1.em)
+            .margin(
+                top = if (breakpoint < Breakpoint.MD) 10.px else 1.px,
+                left = if (breakpoint < Breakpoint.SM) 8.px else if (breakpoint < Breakpoint.MD) 10.px else 5.px
+            ),
         variant = CircleButtonVariant
     ) {
         if (colorMode.isLight) MoonIcon() else SunIcon()
