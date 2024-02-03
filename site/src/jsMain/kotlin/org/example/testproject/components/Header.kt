@@ -52,7 +52,7 @@ fun Header(onMenuClicked: () -> Unit) {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        LeftSide(breakpoint, onMenuClicked)
+//        LeftSide(breakpoint, onMenuClicked)
         if (breakpoint >= Breakpoint.MD) {
             RightSide(breakpoint, colorMode)
         }
