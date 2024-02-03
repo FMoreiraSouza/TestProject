@@ -38,6 +38,7 @@ fun Header(onMenuClicked: () -> Unit) {
     val colorMode by ColorMode.currentState
     Row(
         modifier = Modifier
+            .backgroundColor(Colors.Blue)
             .padding(1.cssRem)
             .position(Position.Fixed)
             .zIndex(2)
@@ -66,8 +67,8 @@ fun LeftSide(
 ) {
     Row(
         modifier = Modifier
-            .backgroundColor(Colors.Yellow),
-//            .fillMaxWidth(),
+            .backgroundColor(Colors.Yellow)
+            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (breakpoint < Breakpoint.MD) {
@@ -84,7 +85,7 @@ fun LeftSide(
         A(href = "/") {
             Image(
                 modifier = Modifier
-                    .minHeight(5.vh)
+//                    .minHeight(5.vh)
                     .fillMaxSize(),
                 src = "ProfessionalLogo.png"
             )
@@ -100,7 +101,7 @@ fun RightSide(
     Row(
         modifier = Modifier
             .backgroundColor(Colors.Green)
-            .fillMaxWidth(),
+            .fillMaxWidth(65.percent),
         horizontalArrangement = Arrangement.End,
     ) {
         Section.entries.forEach { section ->
