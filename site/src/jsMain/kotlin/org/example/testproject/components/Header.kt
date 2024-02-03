@@ -37,18 +37,31 @@ fun Header(onMenuClicked: () -> Unit) {
     val breakpoint = rememberBreakpoint()
     val colorMode by ColorMode.currentState
     Row(
-        modifier = Modifier
-            .padding(1.cssRem)
-            .position(Position.Fixed)
-            .zIndex(2)
-            .fillMaxWidth()
-            .backgroundColor(if (colorMode.isLight) Color.Companion.rgb(255, 255, 255) else Color.Companion.rgb(35, 35, 35)),
-        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier.zIndex(2)
+            .position(Position.Fixed).fillMaxWidth().padding(1.cssRem).margin(top = 20.px),
+        horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        LeftSide(breakpoint, onMenuClicked)
-        if (breakpoint >= Breakpoint.MD) {
-            RightSide(breakpoint, colorMode)
+        Row(
+            modifier = Modifier
+                .padding(1.cssRem)
+                .position(Position.Fixed)
+                .zIndex(2)
+                .fillMaxWidth()
+                .backgroundColor(
+                    if (colorMode.isLight) Color.Companion.rgb(255, 255, 255) else Color.Companion.rgb(
+                        35,
+                        35,
+                        35
+                    )
+                ),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            LeftSide(breakpoint, onMenuClicked)
+            if (breakpoint >= Breakpoint.MD) {
+                RightSide(breakpoint, colorMode)
+            }
         }
     }
 }
