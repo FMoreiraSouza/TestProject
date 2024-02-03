@@ -16,7 +16,6 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import org.example.testproject.components.Header
 import org.example.testproject.components.SocialBar
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
