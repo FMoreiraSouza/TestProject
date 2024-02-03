@@ -13,7 +13,7 @@ import org.jetbrains.compose.web.css.*
 @Composable
 fun AppEntry(content: @Composable () -> Unit) {
     SilkApp {
-        Surface(SmoothColorStyle.toModifier().minHeight(900.px)) {
+        Surface(SmoothColorStyle.toModifier().minHeight(100.vh)) {
             content()
         }
     }

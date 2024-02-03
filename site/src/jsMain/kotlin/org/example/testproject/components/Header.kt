@@ -66,8 +66,8 @@ fun LeftSide(
 ) {
     Row(
         modifier = Modifier
-            .backgroundColor(Colors.Yellow)
-            .fillMaxWidth(),
+            .backgroundColor(Colors.Yellow),
+//            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (breakpoint < Breakpoint.MD) {
@@ -84,8 +84,8 @@ fun LeftSide(
         A(href = "/") {
             Image(
                 modifier = Modifier
-                    .minHeight(900.px),
-//                    .fillMaxSize(),
+                    .minHeight(5.vh)
+                    .fillMaxSize(),
                 src = "ProfessionalLogo.png"
             )
         }
