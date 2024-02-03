@@ -91,8 +91,8 @@ fun RightSide(
         Section.entries.forEach { section ->
             Link(
                 modifier = NavigationHeaderStyle.toModifier()
-                    .padding(leftRight = 5.px, topBottom = 10.px)
-                    .margin(bottom = 4.px)
+//                    .padding(leftRight = 5.px, topBottom = 10.px)
+//                    .margin(bottom = 4.px)
                     .fontFamily("Sans-Serif")
                     .textAlign(TextAlign.Center)
                     .fontSize(if (breakpoint > Breakpoint.MD) 18.px else 14.px)
@@ -113,11 +113,11 @@ fun ToogleColorThemeButton(breakpoint: Breakpoint) {
     Button(
         onClick = { colorMode = colorMode.opposite },
         modifier = Modifier
-            .setVariable(ButtonVars.FontSize, 1.em)
-            .margin(
-                top = if (breakpoint < Breakpoint.MD) 10.px else 1.px,
-                left = if (breakpoint < Breakpoint.SM) 8.px else if (breakpoint < Breakpoint.MD) 10.px else 5.px
-            ),
+            .setVariable(ButtonVars.FontSize, 1.em),
+//            .margin(
+//                top = if (breakpoint < Breakpoint.MD) 10.px else 1.px,
+//                left = if (breakpoint < Breakpoint.SM) 8.px else if (breakpoint < Breakpoint.MD) 10.px else 5.px
+//            ),
         variant = CircleButtonVariant
     ) {
         if (colorMode.isLight) MoonIcon() else SunIcon()
