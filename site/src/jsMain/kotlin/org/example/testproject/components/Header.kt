@@ -87,25 +87,25 @@ fun LeftSide(
                 size = if (breakpoint >= Breakpoint.SM) IconSize.XL else IconSize.LG
             )
         }
-        Box(
-            modifier = Modifier
-                .minHeight(70.px)
-                .backgroundColor(Colors.Red)
-//                .id("boxParent")
-                .fillMaxWidth(),
-        ){
+//        Box(
+//            modifier = Modifier
+//                .minHeight(70.px)
+//                .backgroundColor(Colors.Red)
+////                .id("boxParent")
+//                .fillMaxWidth(),
+//        ){
             A(href = "/") {
                 Image(
                     modifier = Modifier
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
-
+                        .minHeight(70.px)
                         .fillMaxSize(),
                     src = "ProfessionalLogo.png"
                 )
             }
-        }
+//        }
     }
 }
 
