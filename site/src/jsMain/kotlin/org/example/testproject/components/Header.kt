@@ -68,7 +68,7 @@ fun LeftSide(
     onMenuClicked: () -> Unit
 ) {
     Row(
-//        modifier = Modifier
+        modifier = Modifier.minHeight(20.px),
 //            .backgroundColor(Colors.Yellow),
 //            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically,
@@ -95,10 +95,10 @@ fun LeftSide(
 //        ){
         A(href = "/") {
             Image(
-                modifier = LogoStyle.toModifier(),
+                modifier = Modifier
 //                    .height(50.px)
 //                    .width(400.px)
-//                    .fillMaxSize(),
+                    .fillMaxSize(),
 //                    .size(200.px)
 
 //                        .minHeight(70.px)
