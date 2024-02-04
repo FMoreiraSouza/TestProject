@@ -67,7 +67,9 @@ fun LeftSide(
     onMenuClicked: () -> Unit
 ) {
     Row(
-        modifier = Modifier,
+        modifier = Modifier
+            .height(50.px)
+            .width(400.px),
 //            .backgroundColor(Colors.Yellow),
 //            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically,
@@ -92,18 +94,18 @@ fun LeftSide(
 ////                .id("boxParent")
 //                .fillMaxWidth(),
 //        ){
-            A(href = "/") {
-                Image(
-                    modifier = Modifier
+        A(href = "/") {
+            Image(
+                modifier = Modifier
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
 //                        .minHeight(70.px)
-                        .transition(CSSTransition(property = "fillMaxSize",duration = 1.ms))
-                        .fillMaxSize(if (breakpoint >= Breakpoint.SM && breakpoint < Breakpoint.MD) 80.percent else 100.percent),
-                    src = "ProfessionalLogo.png"
-                )
-            }
+                    .transition(CSSTransition(property = "fillMaxSize", duration = 1.ms))
+                    .fillMaxSize(if (breakpoint >= Breakpoint.SM && breakpoint < Breakpoint.MD) 80.percent else 100.percent),
+                src = "ProfessionalLogo.png"
+            )
+        }
 //        }
     }
 }
