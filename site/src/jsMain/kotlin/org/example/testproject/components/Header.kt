@@ -39,7 +39,7 @@ import org.jetbrains.compose.web.dom.A
 fun Header(onMenuClicked: () -> Unit) {
     val breakpoint = rememberBreakpoint()
     val colorMode by ColorMode.currentState
-    SimpleGrid(
+    Row(
         modifier = Modifier
             .backgroundColor(Colors.Blue)
             .padding(1.cssRem)
@@ -53,9 +53,9 @@ fun Header(onMenuClicked: () -> Unit) {
                     35
                 )
             ),
-        numColumns = numColumns(base = 2)
-//        horizontalArrangement = Arrangement.SpaceBetween,
-//        verticalAlignment = Alignment.CenterVertically
+//        numColumns = numColumns(base = 2)
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
     ) {
         LeftSide(breakpoint, onMenuClicked)
         if (breakpoint >= Breakpoint.MD) {
