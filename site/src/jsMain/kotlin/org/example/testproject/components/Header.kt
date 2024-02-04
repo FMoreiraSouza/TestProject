@@ -67,10 +67,11 @@ fun LeftSide(
     onMenuClicked: () -> Unit
 ) {
     Row(
-        modifier = Modifier.minHeight(70.px)
+        modifier = Modifier,
 //            .backgroundColor(Colors.Yellow),
-            .fillMaxWidth(35.percent),
-        verticalAlignment = Alignment.CenterVertically
+//            .fillMaxWidth(35.percent),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.End,
     ) {
         if (breakpoint < Breakpoint.MD) {
             FaBars(
@@ -93,12 +94,12 @@ fun LeftSide(
 //        ){
             A(href = "/") {
                 Image(
-                    modifier = Modifier,
+                    modifier = Modifier
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
 //                        .minHeight(70.px)
-//                        .fillMaxSize(),
+                        .fillMaxSize(),
                     src = "ProfessionalLogo.png"
                 )
             }
