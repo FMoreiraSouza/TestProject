@@ -18,7 +18,7 @@ fun HomePage() {
     var menuOpened by remember {
         mutableStateOf(false)
     }
-    if (!rememberPageContext().isExporting) {
+//    if (!rememberPageContext().isExporting) {
         Box(
             Modifier.fillMaxSize()
         ) {
@@ -30,5 +30,5 @@ fun HomePage() {
                 BeginSection { menuOpened = true }
             }
         }
-    }
+//    }
 }
