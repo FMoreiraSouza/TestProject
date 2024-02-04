@@ -8,6 +8,7 @@ import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -86,17 +87,24 @@ fun LeftSide(
                 size = if (breakpoint >= Breakpoint.SM) IconSize.XL else IconSize.LG
             )
         }
-//        A(href = "/") {
-            Image(
-                modifier = Modifier
+        Box(
+            modifier = Modifier
+                .backgroundColor(Colors.Red)
+//                .id("boxParent")
+                .fillMaxWidth(),
+        ){
+            A(href = "/") {
+                Image(
+                    modifier = Modifier
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
 
-                    .fillMaxSize(),
-                src = "ProfessionalLogo.png"
-            )
-//        }
+                        .fillMaxSize(),
+                    src = "ProfessionalLogo.png"
+                )
+            }
+        }
     }
 }
 
