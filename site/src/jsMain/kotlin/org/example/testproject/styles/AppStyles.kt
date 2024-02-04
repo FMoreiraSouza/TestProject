@@ -10,6 +10,7 @@ import com.varabyte.kobweb.silk.components.animation.Keyframes
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.addVariantBase
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.ms
@@ -143,6 +144,18 @@ val FormStyle by ComponentStyle {
         Modifier
             .border(2.px, LineStyle.Solid, if (colorMode.isLight) Colors.SkyBlue else Colors.RoyalBlue)
     }
+}
+
+val LogoStyle by ComponentStyle {
+    base {
+        Modifier
+            .fillMaxSize(100.percent)
+//            .transition(CSSTransition(property = "border", duration = 200.ms))
+    }
+//    hover {
+//        Modifier
+//            .border(2.px, LineStyle.Solid, if (colorMode.isLight) Colors.SkyBlue else Colors.RoyalBlue)
+//    }
 }
 
 val AppearMoveKeyFrames by Keyframes {

@@ -28,6 +28,7 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.example.testproject.models.Section
 import org.example.testproject.styles.CircleButtonVariant
+import org.example.testproject.styles.LogoStyle
 import org.example.testproject.styles.NavigationHeaderStyle
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.A
@@ -96,13 +97,13 @@ fun LeftSide(
 //        ){
         A(href = "/") {
             Image(
-                modifier = Modifier
+                modifier = LogoStyle.toModifier(),
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
 //                        .minHeight(70.px)
-                    .transition(CSSTransition(property = "fillMaxSize", duration = 1.ms))
-                    .fillMaxSize(if (breakpoint >= Breakpoint.SM && breakpoint < Breakpoint.MD) 80.percent else 100.percent),
+//                    .transition(CSSTransition(property = "fillMaxSize", duration = 1.ms))
+//                    .fillMaxSize(if (breakpoint >= Breakpoint.SM && breakpoint < Breakpoint.MD) 80.percent else 100.percent),
                 src = "ProfessionalLogo.png"
             )
         }
