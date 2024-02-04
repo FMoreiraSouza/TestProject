@@ -56,9 +56,9 @@ fun Header(onMenuClicked: () -> Unit) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         LeftSide(breakpoint, onMenuClicked)
-//        if (breakpoint >= Breakpoint.MD) {
+        if (breakpoint >= Breakpoint.MD) {
             RightSide(breakpoint, colorMode)
-//        }
+        }
     }
 }
 
@@ -71,10 +71,10 @@ fun LeftSide(
 //        modifier = Modifier
 //            .backgroundColor(Colors.Yellow),
 //            .fillMaxWidth(35.percent),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.End,
     ) {
-//        if (breakpoint < Breakpoint.MD) {
+        if (breakpoint < Breakpoint.MD) {
             FaBars(
                 modifier = Modifier
 //                    .fillMaxWidth()
@@ -83,9 +83,9 @@ fun LeftSide(
                     .onClick {
                         onMenuClicked()
                     },
-                size = IconSize.XL
+                size = if (breakpoint >= Breakpoint.SM) IconSize.XL else IconSize.LG
             )
-//        }
+        }
 //        Box(
 //            modifier = Modifier
 //                .minHeight(70.px)
@@ -95,10 +95,10 @@ fun LeftSide(
 //        ){
         A(href = "/") {
             Image(
-                modifier = Modifier
-                    .height(50.px)
-                    .width(400.px)
-                    .fillMaxSize(),
+                modifier = LogoStyle.toModifier(),
+//                    .height(50.px)
+//                    .width(400.px)
+//                    .fillMaxSize(),
 //                    .size(200.px)
 
 //                        .minHeight(70.px)

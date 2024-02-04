@@ -151,10 +151,18 @@ val LogoStyle by ComponentStyle {
         Modifier
             .height(50.px)
             .width(400.px)
-//            .height(50.px)
-//            .width(400.px)
-//            .transition(CSSTransition(property = "border", duration = 200.ms))
     }
+    Breakpoint.MD {
+        Modifier.fillMaxSize()
+    }
+
+//    base {
+//        Modifier
+//
+////            .height(50.px)
+////            .width(400.px)
+////            .transition(CSSTransition(property = "border", duration = 200.ms))
+//    }
 //    hover {
 //        Modifier
 //            .border(2.px, LineStyle.Solid, if (colorMode.isLight) Colors.SkyBlue else Colors.RoyalBlue)
