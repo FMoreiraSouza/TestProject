@@ -44,6 +44,7 @@ fun Header(onMenuClicked: () -> Unit) {
             .position(Position.Fixed)
             .zIndex(2)
             .fillMaxWidth()
+            .minHeight(80.px)
             .backgroundColor(
                 if (colorMode.isLight) Color.Companion.rgb(255, 255, 255) else Color.Companion.rgb(
                     35,
@@ -68,7 +69,7 @@ fun LeftSide(
     onMenuClicked: () -> Unit
 ) {
     Row(
-        modifier = Modifier.minHeight(80.px),
+//        modifier = Modifier.minHeight(80.px),
 //            .backgroundColor(Colors.Yellow),
 //            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically,
