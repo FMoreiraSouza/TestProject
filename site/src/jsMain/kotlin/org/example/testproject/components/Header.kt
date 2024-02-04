@@ -98,9 +98,9 @@ fun LeftSide(
         A(href = "/") {
             Image(
                 modifier = LogoStyle.toModifier()
+                    .fillMaxSize(100.percent),
 //                    .size(200.px)
-                    .height(50.px)
-                    .width(400.px),
+
 //                        .minHeight(70.px)
 //                    .transition(CSSTransition(property = "fillMaxSize", duration = 1.ms))
 //                    .fillMaxSize(if (breakpoint >= Breakpoint.SM && breakpoint < Breakpoint.MD) 80.percent else 100.percent),
