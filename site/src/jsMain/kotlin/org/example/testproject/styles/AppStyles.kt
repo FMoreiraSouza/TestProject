@@ -149,7 +149,8 @@ val FormStyle by ComponentStyle {
 val LogoStyle by ComponentStyle {
     base {
         Modifier
-            .fillMaxSize(100.percent)
+            .height(50.px)
+            .width(400.px)
 //            .transition(CSSTransition(property = "border", duration = 200.ms))
     }
 //    hover {

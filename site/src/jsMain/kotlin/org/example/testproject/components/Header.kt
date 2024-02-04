@@ -98,8 +98,7 @@ fun LeftSide(
         A(href = "/") {
             Image(
                 modifier = Modifier
-                    .height(50.px)
-                    .width(400.px),
+                    .fillMaxSize(100.percent),
 //                    .size(200.px)
 
 //                        .minHeight(70.px)
