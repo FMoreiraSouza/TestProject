@@ -3,10 +3,7 @@ package org.example.testproject.sections
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import com.varabyte.kobweb.compose.css.Cursor
-import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.TextAlign
-import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -41,7 +38,7 @@ fun Header(onMenuClicked: () -> Unit) {
     val colorMode by ColorMode.currentState
     Row(
         modifier = Modifier
-            .backgroundColor(Colors.Blue)
+//            .backgroundColor(Colors.Blue)
             .padding(1.cssRem)
             .position(Position.Fixed)
             .zIndex(2)
@@ -70,8 +67,8 @@ fun LeftSide(
     onMenuClicked: () -> Unit
 ) {
     Row(
-        modifier = Modifier
-            .backgroundColor(Colors.Yellow),
+        modifier = Modifier,
+//            .backgroundColor(Colors.Yellow),
 //            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -100,7 +97,7 @@ fun LeftSide(
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
-                        .minHeight(70.px)
+                        .minHeight(Height.MaxContent)
                         .fillMaxSize(),
                     src = "ProfessionalLogo.png"
                 )
@@ -116,7 +113,7 @@ fun RightSide(
 ) {
     Row(
         modifier = Modifier
-            .backgroundColor(Colors.Green)
+//            .backgroundColor(Colors.Green)
             .fillMaxWidth(),
         horizontalArrangement = Arrangement.End,
     ) {
