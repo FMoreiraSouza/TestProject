@@ -21,6 +21,8 @@ import com.varabyte.kobweb.silk.components.icons.MoonIcon
 import com.varabyte.kobweb.silk.components.icons.SunIcon
 import com.varabyte.kobweb.silk.components.icons.fa.FaBars
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
+import com.varabyte.kobweb.silk.components.layout.SimpleGrid
+import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
@@ -36,7 +38,7 @@ import org.jetbrains.compose.web.dom.A
 fun Header(onMenuClicked: () -> Unit) {
     val breakpoint = rememberBreakpoint()
     val colorMode by ColorMode.currentState
-    Row(
+    SimpleGrid(
         modifier = Modifier
             .backgroundColor(Colors.Blue)
             .padding(1.cssRem)
@@ -50,8 +52,9 @@ fun Header(onMenuClicked: () -> Unit) {
                     35
                 )
             ),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
+        numColumns = numColumns(base = 2)
+//        horizontalArrangement = Arrangement.SpaceBetween,
+//        verticalAlignment = Alignment.CenterVertically
     ) {
         LeftSide(breakpoint, onMenuClicked)
         if (breakpoint >= Breakpoint.MD) {
@@ -74,6 +77,7 @@ fun LeftSide(
         if (breakpoint < Breakpoint.MD) {
             FaBars(
                 modifier = Modifier
+//                    .fillMaxWidth()
                     .margin(right = 4.px, bottom = 8.px)
                     .cursor(Cursor.Pointer)
                     .onClick {
@@ -82,15 +86,17 @@ fun LeftSide(
                 size = if (breakpoint >= Breakpoint.SM) IconSize.XL else IconSize.LG
             )
         }
-        A(href = "/") {
+//        A(href = "/") {
             Image(
                 modifier = Modifier
-                    .size(200.px)
-                    .minHeight(5.vh),
-//                    .fillMaxSize(),
+//                    .size(200.px)
+//                    .height(50.px)
+//                    .width(400.px),
+
+                    .fillMaxSize(),
                 src = "ProfessionalLogo.png"
             )
-        }
+//        }
     }
 }
 
