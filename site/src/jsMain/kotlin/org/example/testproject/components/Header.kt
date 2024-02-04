@@ -67,9 +67,9 @@ fun LeftSide(
     onMenuClicked: () -> Unit
 ) {
     Row(
-        modifier = Modifier.minHeight(70.px),
+        modifier = Modifier.minHeight(70.px)
 //            .backgroundColor(Colors.Yellow),
-//            .fillMaxWidth(35.percent),
+            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (breakpoint < Breakpoint.MD) {
@@ -93,12 +93,12 @@ fun LeftSide(
 //        ){
             A(href = "/") {
                 Image(
-                    modifier = Modifier
+                    modifier = Modifier,
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
-                        .minHeight(70.px)
-                        .fillMaxSize(),
+//                        .minHeight(70.px)
+//                        .fillMaxSize(),
                     src = "ProfessionalLogo.png"
                 )
             }
