@@ -99,7 +99,7 @@ fun LeftSide(
 //                    .height(50.px)
 //                    .width(400.px),
 //                        .minHeight(70.px)
-                        .fillMaxSize(),
+                        .size(100.percent),
                     src = "ProfessionalLogo.png"
                 )
             }
