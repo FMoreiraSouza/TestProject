@@ -68,7 +68,7 @@ fun LeftSide(
     onMenuClicked: () -> Unit
 ) {
     Row(
-        modifier = Modifier.minHeight(60.px),
+        modifier = Modifier.minHeight(80.px),
 //            .backgroundColor(Colors.Yellow),
 //            .fillMaxWidth(35.percent),
         verticalAlignment = Alignment.CenterVertically,

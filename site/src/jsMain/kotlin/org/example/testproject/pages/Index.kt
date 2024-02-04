@@ -10,6 +10,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.isExporting
 import com.varabyte.kobweb.core.rememberPageContext
+import org.example.testproject.components.MenuBar
 import org.example.testproject.sections.BeginSection
 
 @Page
@@ -18,7 +19,7 @@ fun HomePage() {
     var menuOpened by remember {
         mutableStateOf(false)
     }
-//    if (!rememberPageContext().isExporting) {
+    if (!rememberPageContext().isExporting) {
         Box(
             Modifier.fillMaxSize()
         ) {
@@ -29,6 +30,7 @@ fun HomePage() {
             ) {
                 BeginSection { menuOpened = true }
             }
+//            if (menuOpened) MenuBar { menuOpened = false }
         }
-//    }
+    }
 }
