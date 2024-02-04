@@ -97,8 +97,9 @@ fun LeftSide(
 //        ){
         A(href = "/") {
             Image(
-                modifier = Modifier
-                    .fillMaxSize(100.percent),
+                modifier = LogoStyle.toModifier()
+                    .height(50.px)
+                    .width(400.px),
 //                    .size(200.px)
 
 //                        .minHeight(70.px)
