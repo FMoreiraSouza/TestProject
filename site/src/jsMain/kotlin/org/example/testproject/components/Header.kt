@@ -97,7 +97,7 @@ fun LeftSide(
 //                    .size(200.px)
 //                    .height(50.px)
 //                    .width(400.px),
-                        .minHeight(Height.MaxContent)
+                        .minHeight(70.px)
                         .fillMaxSize(),
                     src = "ProfessionalLogo.png"
                 )
