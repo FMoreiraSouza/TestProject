@@ -89,6 +89,7 @@ fun LeftSide(
         }
         Box(
             modifier = Modifier
+                .minHeight(70.px)
                 .backgroundColor(Colors.Red)
 //                .id("boxParent")
                 .fillMaxWidth(),
