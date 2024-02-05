@@ -28,7 +28,7 @@ fun BeginSection(onMenuClicked: () -> Unit) {
         contentAlignment = Alignment.TopCenter
     ) {
         Header(onMenuClicked)
-//        BeginContent()
+        BeginContent()
     }
 }
 
