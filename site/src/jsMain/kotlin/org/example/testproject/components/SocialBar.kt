@@ -17,6 +17,7 @@ import com.varabyte.kobweb.silk.components.icons.fa.FaLinkedin
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Text
@@ -41,7 +42,7 @@ fun SocialBar(breakpoint: Breakpoint) {
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                SocialLinks()
+                SocialLinks(breakpoint)
                 SpeakOnEmail(breakpoint)
             }
         }
@@ -55,7 +56,7 @@ fun SocialBar(breakpoint: Breakpoint) {
                     horizontalArrangement = Arrangement.Center,
                     verticalAlignment = Alignment.CenterVertically
                 ){
-                    SocialLinks()
+                    SocialLinks(breakpoint)
                 }
             }
         }
@@ -63,9 +64,12 @@ fun SocialBar(breakpoint: Breakpoint) {
 }
 
 @Composable
-fun SocialLinks() {
+fun SocialLinks(breakpoint: Breakpoint) {
     Link(
-        modifier = Modifier.margin(bottom = 20.px, right = 10.px),
+        modifier = Modifier.margin(
+            right = 10.px,
+            bottom = if (breakpoint >= Breakpoint.SM) 20.px else 10.px
+        ),
         path = "https://www.linkedin.com/in/felipe-moreira-b16147200/",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
@@ -75,7 +79,10 @@ fun SocialLinks() {
         )
     }
     Link(
-        modifier = Modifier.margin(bottom = 20.px, left = 10.px),
+        modifier = Modifier.margin(
+            right = 10.px,
+            bottom = if (breakpoint >= Breakpoint.SM) 20.px else 10.px
+        ),
         path = "https://github.com/FMoreiraSouza",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
