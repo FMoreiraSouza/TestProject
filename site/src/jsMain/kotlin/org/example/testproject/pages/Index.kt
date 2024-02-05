@@ -12,6 +12,7 @@ import com.varabyte.kobweb.core.isExporting
 import com.varabyte.kobweb.core.rememberPageContext
 import org.example.testproject.components.MenuBar
 import org.example.testproject.sections.BeginSection
+import org.example.testproject.sections.EndSection
 
 @Page
 @Composable
@@ -29,6 +30,7 @@ fun HomePage() {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 BeginSection { menuOpened = true }
+                EndSection()
             }
 //            if (menuOpened) MenuBar { menuOpened = false }
         }
