@@ -68,7 +68,7 @@ fun SocialLinks(breakpoint: Breakpoint) {
     Link(
         modifier = Modifier.margin(
             right = 10.px,
-            bottom = if (breakpoint >= Breakpoint.SM) 20.px else 10.px
+            bottom = if (breakpoint >= Breakpoint.SM) 20.px else 5.px
         ),
         path = "https://www.linkedin.com/in/felipe-moreira-b16147200/",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
@@ -81,7 +81,7 @@ fun SocialLinks(breakpoint: Breakpoint) {
     Link(
         modifier = Modifier.margin(
             right = 10.px,
-            bottom = if (breakpoint >= Breakpoint.SM) 20.px else 10.px
+            bottom = if (breakpoint >= Breakpoint.SM) 20.px else 5.px
         ),
         path = "https://github.com/FMoreiraSouza",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
