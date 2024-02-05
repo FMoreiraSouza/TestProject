@@ -40,7 +40,7 @@ fun Header(onMenuClicked: () -> Unit) {
     Row(
         modifier = Modifier
 //            .backgroundColor(Colors.Blue)
-            .padding(1.cssRem)
+            .padding(leftRight = 1.cssRem)
             .position(Position.Fixed)
             .zIndex(2)
             .fillMaxWidth()

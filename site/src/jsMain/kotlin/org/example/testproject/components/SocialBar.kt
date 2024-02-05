@@ -65,7 +65,7 @@ fun SocialBar(breakpoint: Breakpoint) {
 @Composable
 fun SocialLinks() {
     Link(
-        modifier = Modifier.margin(right = 10.px),
+        modifier = Modifier.margin(bottom = 20.px, right = 10.px),
         path = "https://www.linkedin.com/in/felipe-moreira-b16147200/",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
@@ -75,7 +75,7 @@ fun SocialLinks() {
         )
     }
     Link(
-        modifier = Modifier.margin(left = 10.px),
+        modifier = Modifier.margin(bottom = 20.px, left = 10.px),
         path = "https://github.com/FMoreiraSouza",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {

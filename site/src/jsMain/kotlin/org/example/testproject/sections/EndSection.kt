@@ -29,7 +29,7 @@ fun EndSection() {
         modifier = Modifier
             .backgroundColor(if (colorMode.isLight) Color.argb(0.7f, 211, 211, 212) else Color.argb(0.2f, 211, 211, 212))
             .margin(top = 2000.px)
-            .height(if(breakpoint >= Breakpoint.SM) 160.px else 180.px)
+            .height(if(breakpoint >= Breakpoint.SM) 160.px else 200.px)
             .fillMaxWidth(),
         contentAlignment = Alignment.TopCenter
     ) {
